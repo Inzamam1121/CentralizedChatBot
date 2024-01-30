@@ -45,43 +45,49 @@ const Login = () => {
 
 
     try {
-      // Make the API call to your login endpoint
       const payload = new FormData();
       payload.append('email', credentials.email);
       payload.append('password', credentials.password);
-
-      const response = await fetch('https://mymbgserver.mbgchat.com/login/', {
-        method: 'POST',
-        body: payload,
-      });
-
-
-      if (response.ok) {
-        // If the login is successful, get the auth token from the response
-        const data = await response.json();
-        const authToken = data.token;
-
-        // Save the auth token in session storage
-        sessionStorage.setItem('authToken', authToken);
-
-        showAlert('Login Success', 'success')
-
-
-        setIsSubmitting(false);
-        navigate("/dashboard");
-
-
-        // Redirect to another page or perform other actions as needed
-      } else {
-        // Handle error cases, e.g., display an error message
-        showAlert('In-Correct Credential', 'danger')
-        setIsSubmitting(false);
+    
+      let redirectUrl = 'https://mymbgserver.mbgchat.com/login/';
+    
+      while (true) {
+        const response = await fetch(redirectUrl, {
+          method: 'POST',
+          body: payload,
+          redirect: 'manual', // Explicitly enable redirect handling
+        });
+    
+        if (response.ok) {
+          // If the login is successful, get the auth token from the response
+          const data = await response.json();
+          const authToken = data.token;
+    
+          // Save the auth token in session storage
+          sessionStorage.setItem('authToken', authToken);
+    
+          showAlert('Login Success', 'success');
+    
+          setIsSubmitting(false);
+          navigate("/dashboard");
+    
+          // Redirect to another page or perform other actions as needed
+          break;
+        } else if (response.redirected) {
+          // If a redirect occurred, update the redirectUrl and try again
+          redirectUrl = response.headers.get('Location');
+        } else {
+          // Handle other error cases, e.g., display an error message
+          showAlert('In-Correct Credential', 'danger');
+          setIsSubmitting(false);
+          break;
+        }
       }
     } catch (error) {
-      showAlert('Error Occured', 'danger')
+      showAlert('Error Occurred', 'danger');
       setIsSubmitting(false);
-
     }
+    
   };
 
   const handleChange = (e) => {
