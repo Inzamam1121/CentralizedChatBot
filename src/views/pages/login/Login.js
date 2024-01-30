@@ -38,12 +38,13 @@ const Login = () => {
 
     try {
       // Make the API call to your login endpoint
+      console.log(223);
       const payload = new URLSearchParams();
       payload.append('email', credentials.email);
       payload.append('password', credentials.password);
 
       const response = await fetch('https://mymbgserver.mbgchat.com/login/', {
-        method: 'GET',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
