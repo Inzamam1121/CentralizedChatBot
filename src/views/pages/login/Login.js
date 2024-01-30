@@ -38,7 +38,6 @@ const Login = () => {
 
     try {
       // Make the API call to your login endpoint
-      console.log(223);
       const payload = new URLSearchParams();
       payload.append('email', credentials.email);
       payload.append('password', credentials.password);
@@ -50,6 +49,7 @@ const Login = () => {
         },
         body: payload,
       });
+      console.log(223);
 
 
       if (response.ok) {
