@@ -9,6 +9,6 @@ export default function Alert(s) {
     const { alert } = Context;
 
     return (
-        alert && <CAlert color={alert.type} style={{ position: "fixed", top: "50px", left: "38%", transition: "ease-in-out 5s" , zIndex:"1000000000"}}>{alert.message}</CAlert>
+        alert && <CAlert color={alert.type} style={{ position: "fixed", top: "50px", right: "10px", transition: "ease-in-out 5s" , zIndex:"1000000000"}}>{alert.message}</CAlert>
     )
 }

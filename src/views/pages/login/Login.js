@@ -36,9 +36,17 @@ const Login = () => {
   const handleLogin = async () => {
     setIsSubmitting(true);
 
+
+
+    const payload = new FormData();
+    payload.append('email', credentials.email);
+    payload.append('password', credentials.password);
+
+
+
     try {
       // Make the API call to your login endpoint
-      const payload = new URLSearchParams();
+      const payload = new FormData();
       payload.append('email', credentials.email);
       payload.append('password', credentials.password);
 
@@ -46,7 +54,6 @@ const Login = () => {
         method: 'POST',
         body: payload,
       });
-      console.log(223);
 
 
       if (response.ok) {
