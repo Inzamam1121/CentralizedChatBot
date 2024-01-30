@@ -44,9 +44,6 @@ const Login = () => {
 
       const response = await fetch('https://mymbgserver.mbgchat.com/login/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
         body: payload,
       });
       console.log(223);
