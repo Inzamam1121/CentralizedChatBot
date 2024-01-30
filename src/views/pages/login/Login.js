@@ -42,16 +42,14 @@ const Login = () => {
       payload.append('email', credentials.email);
       payload.append('password', credentials.password);
 
-      const response = await fetch('https://mymbgserver.mbgchat.com/login/', {
+      const response = await fetch('https://mymbgserver.mbgchat.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: payload,
+        redirect: 'follow', // Follow redirects automatically
       });
-      
-      console.log(223);
-
 
       if (response.ok) {
         // If the login is successful, get the auth token from the response
@@ -61,24 +59,22 @@ const Login = () => {
         // Save the auth token in session storage
         sessionStorage.setItem('authToken', authToken);
 
-        showAlert('Login Success', 'success')
-
+        showAlert('Login Success', 'success');
 
         setIsSubmitting(false);
         navigate("/dashboard");
 
-
         // Redirect to another page or perform other actions as needed
       } else {
         // Handle error cases, e.g., display an error message
-        showAlert('In-Correct Credential', 'danger')
+        showAlert('Incorrect Credentials', 'danger');
         setIsSubmitting(false);
       }
     } catch (error) {
-      showAlert('Error Occured', 'danger')
+      showAlert('Error Occurred', 'danger');
       setIsSubmitting(false);
+    }
 
-    }
   };
 
   const handleChange = (e) => {
