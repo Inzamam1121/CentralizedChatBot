@@ -22,6 +22,7 @@ const AppSidebar = () => {
 
   return (
     <CSidebar
+    className='bggray'
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -30,7 +31,7 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={'https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216'} height={35} />
+        <img src="https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216" style={{width:"150px",height:"100px"}} alt="" />
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>

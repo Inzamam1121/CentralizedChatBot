@@ -24,3 +24,45 @@
     font-weight: 400;
     color: rgb(63, 63, 63);
 }
+
+.bgblue{
+    background-color: #001f3f !important;
+    border-color: #001f3f !important;
+}
+
+.bgbuttonblue:hover{
+    background-color: #011529 !important;
+    border-color: #011529 !important;
+}
+
+.clwhite{
+    color: white !important;
+}
+
+.clwhite a{
+    color: white !important;
+}
+
+.bggray{
+    background-color: #B0B8BC !important;
+    border-color: #B0B8BC !important;
+}
+
+.bgbutton:hover{
+    background-color: #6d7274 !important;
+    border-color: #6d7274 !important;
+}
+
+.sidebar-nav .nav-link.active{
+    background-color: #001f3f !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    color: white !important;
+}
+
+.bgclear{
+    background-color: rgb(0, 0, 0, 0.4) !important;
+    border-color: none !important;
+
+}

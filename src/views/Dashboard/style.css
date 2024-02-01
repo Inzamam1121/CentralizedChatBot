@@ -9,10 +9,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    background-color: #f5f5f5;
+    background-color: #001F3F;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     border-radius: 10px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    color: white;
 }
 
 .main{
@@ -73,3 +77,4 @@
     }
     
 }
+

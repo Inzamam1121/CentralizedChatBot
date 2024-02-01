@@ -26,27 +26,26 @@ const AppHeader = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="mb-4">
+    <CHeader position="sticky" className="bgblue">
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
         >
-          <CIcon icon={cilMenu} size="lg" />
+          <CIcon icon={cilMenu} size="lg"  className='clwhite'/>
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
           {/* <CIcon icon={logo} height={48} alt="Logo" /> */}
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink}>
+            <CNavLink to="/dashboard" component={NavLink} className='clwhite'>
               Dashboard
             </CNavLink>
           </CNavItem>
         </CHeaderNav>
-        <CHeaderNav className="d-none d-md-flex">
-          <CButton color="mx-2"
-            style={{ backgroundColor: "#bf1b2c", borderColor: "#bf1b2c", color:"white" }}
+        <CHeaderNav className="d-flex">
+          <CButton color="mx-2 bggray clwhite bgbutton"
             onClick={() => {
               sessionStorage.removeItem("authToken")
               navigate('/login')

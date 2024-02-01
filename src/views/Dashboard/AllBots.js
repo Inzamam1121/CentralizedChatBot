@@ -54,8 +54,8 @@ const AllBots = () => {
     <CRow>
       <CCol xs>
         <CCard className="mb-4">
-          <CCardHeader>All ChatBots Sites</CCardHeader>
-          <CCardBody>
+          <CCardHeader className='bggray clwhite'>All ChatBots Sites</CCardHeader>
+          <CCardBody className='bggray'>
             <div className="mainBody">
               {Users.length > 0 && Users.map((item, index) => (
                 <div className="block">
@@ -67,12 +67,12 @@ const AllBots = () => {
                     <p>{item?.Description}</p>
                   </div>
                   <div className="button">
-                    <CButton color="mx-2" style={{ backgroundColor: "#bf1b2c", borderColor: "#bf1b2c" }}>
+                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#B0B8BC", borderColor: "#B0B8BC" }}>
                       <a href={item?.Website} target='_blank' style={{ color: "white", textDecoration: "none", borderColor: "#bf1b2c" }}>
                         Visit Website
                       </a>
                     </CButton>
-                    <CButton color="mx-2" style={{ backgroundColor: "#1848a0", color: "white" }}
+                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#B0B8BC", color: "white" }}
                       onClick={() => {
                         navigate("/Bots/AddFile", { state: item });
                       }}>

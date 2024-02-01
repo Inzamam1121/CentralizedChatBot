@@ -97,14 +97,14 @@ const AddFile = () => {
     return (
         <CCol xs={12}>
             <CCard className="mb-4">
-                <CCardHeader>
+                <CCardHeader className='bggray clwhite'>
                     <strong>Add File</strong>
                 </CCardHeader>
-                <CCardBody>
-                    <CForm className="bgForm" onSubmit={handleFormSubmit}>
+                <CCardBody className='bggray'>
+                    <CForm className="bgForm bgblue" onSubmit={handleFormSubmit}>
                         <div className="row">
                             <div className="mb-3 col-md-6">
-                                <CFormLabel htmlFor="file">Upload File (.txt, .pdf, .docx)</CFormLabel>
+                                <CFormLabel htmlFor="file" className='clwhite'>Upload File (.txt, .docx)</CFormLabel>
                                 <CFormInput
                                     type="file"
                                     id="file"
@@ -113,7 +113,7 @@ const AddFile = () => {
                             </div>
                         </div>
                         <div className="mb-3">
-                            <CButton type="submit" className="mb-3" disabled={isSubmitting}>
+                            <CButton type="submit" className="mb-3 bggray clwhite bgbutton" disabled={isSubmitting} >
                                 {isSubmitting ? 'Adding File...' : 'Add File'}
                             </CButton>
                         </div>

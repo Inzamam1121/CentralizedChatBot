@@ -16,6 +16,7 @@ import {
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 import AlertContext from 'src/Context/Alert/AlertContext'
+import BgVideo from '../../../assets/video/Intro.gif'
 
 const Login = () => {
 
@@ -87,19 +88,26 @@ const Login = () => {
 
 
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div className="bg-light min-vh-100 d-flex flex-row align-items-center" 
+      style={{
+        background:`url(${BgVideo})`, 
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}>
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md={8}>
             <CCardGroup>
-              <CCard className="p-4">
+              <CCard className="p-4 bgclear">
                 <CCardBody>
                   <CForm>
-                    <h1>Login</h1>
-                    <p className="text-medium-emphasis">Sign In to your account</p>
+                    <h1 className='clwhite'>Login</h1>
+                    <p className="text-medium-emphasis clwhite">Sign In to your account</p>
                     <CInputGroup className="mb-3">
-                      <CInputGroupText>
-                        <CIcon icon={cilUser} />
+                      <CInputGroupText className='bgblue'>
+                        <CIcon icon={cilUser} className='clwhite'/>
                       </CInputGroupText>
                       <CFormInput
                         name="email"
@@ -110,8 +118,8 @@ const Login = () => {
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
-                      <CInputGroupText>
-                        <CIcon icon={cilLockLocked} />
+                      <CInputGroupText className='bgblue'>
+                        <CIcon icon={cilLockLocked} className='clwhite' />
                       </CInputGroupText>
                       <CFormInput
                         type="password"
@@ -124,7 +132,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" className="px-4" onClick={handleLogin} disabled={isSubmitting}>
+                        <CButton color="primary" className="px-4 bgblue my-4 bgbuttonblue" onClick={handleLogin} disabled={isSubmitting}>
                           {isSubmitting ? "Logining" : "Login"}
                         </CButton>
                       </CCol>
