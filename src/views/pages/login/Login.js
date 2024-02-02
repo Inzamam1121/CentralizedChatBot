@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
+  CAvatar,
   CButton,
   CCard,
   CCardBody,
@@ -17,6 +18,8 @@ import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 import AlertContext from 'src/Context/Alert/AlertContext'
 import BgVideo from '../../../assets/video/Intro.gif'
+import facebook from '../../../assets/images/facebook.png'
+import google from '../../../assets/images/search.png'
 
 const Login = () => {
 
@@ -74,7 +77,7 @@ const Login = () => {
     } catch (error) {
       showAlert('Error Occurred', 'danger');
       setIsSubmitting(false);
-    }
+    }
 
   };
 
@@ -88,9 +91,9 @@ const Login = () => {
 
 
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center" 
+    <div className="bg-light min-vh-100 d-flex flex-row align-items-center"
       style={{
-        background:`url(${BgVideo})`, 
+        background: `url(${BgVideo})`,
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -98,16 +101,27 @@ const Login = () => {
       }}>
       <CContainer>
         <CRow className="justify-content-center">
-          <CCol md={8}>
+          <CCol md={4} sm={8}>
             <CCardGroup>
               <CCard className="p-4 bgclear">
                 <CCardBody>
-                  <CForm>
+                  <CForm className='text-center'>
                     <h1 className='clwhite'>Login</h1>
                     <p className="text-medium-emphasis clwhite">Sign In to your account</p>
+                    <div className='borderdata'>
+                      <CAvatar size="sm" src={google} />
+                      <h2>Continue With Google</h2>
+                      <div></div>
+                    </div>
+                    <div className='borderdata'>
+                      <CAvatar size="sm" src={facebook} />
+                      <h2>Continue With Facebook</h2>
+                      <div></div>
+                    </div>
+                    <p className="text-medium-emphasis clwhite">Or</p>
                     <CInputGroup className="mb-3">
                       <CInputGroupText className='bgblue'>
-                        <CIcon icon={cilUser} className='clwhite'/>
+                        <CIcon icon={cilUser} className='clwhite' />
                       </CInputGroupText>
                       <CFormInput
                         name="email"
@@ -131,8 +145,8 @@ const Login = () => {
                       />
                     </CInputGroup>
                     <CRow>
-                      <CCol xs={6}>
-                        <CButton color="primary" className="px-4 bgblue my-4 bgbuttonblue" onClick={handleLogin} disabled={isSubmitting}>
+                      <CCol>
+                        <CButton color="primary" className="px-4 bgblue my-4 bgbuttonblue w-100" onClick={handleLogin} disabled={isSubmitting}>
                           {isSubmitting ? "Logining" : "Login"}
                         </CButton>
                       </CCol>

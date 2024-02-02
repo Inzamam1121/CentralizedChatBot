@@ -66,3 +66,36 @@
     border-color: none !important;
 
 }
+
+
+.borderdata{
+    border: 3px solid #B0B8BC;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.borderdata h2{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:650px) {
+    .borderdata{
+        padding: 10px 10px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .borderdata h2{
+        font-size: 16px;
+    }
+}
