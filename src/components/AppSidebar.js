@@ -30,10 +30,10 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
-        <img src="https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216" style={{width:"150px",height:"100px"}} alt="" />
+      <CSidebarBrand className="d-none d-md-flex bgwhite" to="/" >
+        <img src="https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216" style={{height:"100px"}} alt="" />
       </CSidebarBrand>
-      <CSidebarNav>
+      <CSidebarNav className='bgwhite'>
         <SimpleBar>
           <AppSidebarNav items={navigation} />
         </SimpleBar>

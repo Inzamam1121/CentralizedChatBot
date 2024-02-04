@@ -55,9 +55,22 @@
 
 .sidebar-nav .nav-link.active{
     background-color: #001f3f !important;
+    color: white !important;
 }
 
 .breadcrumb-item + .breadcrumb-item::before{
+    color: white !important;
+}
+
+.sidebar-nav .nav-link{
+    color: black !important;
+}
+
+.sidebar-nav svg.nav-icon{
+    color: black !important;
+}
+
+.sidebar-nav .nav-link.active .nav-icon{
     color: white !important;
 }
 
@@ -65,6 +78,11 @@
     background-color: rgb(0, 0, 0, 0.4) !important;
     border-color: none !important;
 
+}
+
+.bgwhite{
+    background-color: white !important;
+    border-color: white !important;
 }
 
 

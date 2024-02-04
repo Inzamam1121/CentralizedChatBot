@@ -61,18 +61,18 @@ const AllBots = () => {
                 <div className="block">
                   <div className='main'>
                     <CAvatar size="md" src={`${item.image ? `${item?.image}` : 'https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216'}`} className='imag' />
-                    <h3>{item?.Name}</h3>
+                    <h3 className='clgray'>{item?.Name}</h3>
                   </div>
                   <div className="des">
-                    <p>{item?.Description}</p>
+                    <p className='clgray'>{item?.Description}</p>
                   </div>
                   <div className="button">
-                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#B0B8BC", borderColor: "#B0B8BC" }}>
+                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#4e5253", borderColor: "#4e5253" }}>
                       <a href={item?.Website} target='_blank' style={{ color: "white", textDecoration: "none", borderColor: "#bf1b2c" }}>
                         Visit Website
                       </a>
                     </CButton>
-                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#B0B8BC", color: "white" }}
+                    <CButton color="mx-2 bgbutton" style={{ backgroundColor: "#4e5253", color: "white" }}
                       onClick={() => {
                         navigate("/Bots/AddFile", { state: item });
                       }}>
