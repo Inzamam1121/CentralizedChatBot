@@ -30,6 +30,12 @@
     border-color: #001f3f !important;
 }
 
+
+.bgdark{
+    background-color: #010101 !important;
+    border-color: #010101 !important;
+}
+
 .bgbuttonblue:hover{
     background-color: #011529 !important;
     border-color: #011529 !important;
@@ -63,15 +69,24 @@
 }
 
 .sidebar-nav .nav-link{
-    color: black !important;
+    color: white !important;
 }
 
 .sidebar-nav svg.nav-icon{
-    color: black !important;
+    color: white !important;
 }
 
 .sidebar-nav .nav-link.active .nav-icon{
     color: white !important;
+}
+
+.simplebar-content{
+    margin-right: 5px;
+}
+
+.bgdarker{
+    background-color: #c2c7d6;
+    border-color: #c2c7d6;
 }
 
 .bgclear{

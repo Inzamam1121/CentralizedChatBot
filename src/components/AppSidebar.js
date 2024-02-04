@@ -15,6 +15,8 @@ import 'simplebar/dist/simplebar.min.css'
 // sidebar nav config
 import navigation from '../_nav'
 
+import logo from "src/assets/images/CNLOGO.png"
+
 const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
@@ -30,10 +32,10 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex bgwhite" to="/" >
-        <img src="https://www.mybenefitsguardian.com/lib_xxgOhURDPpOpyvNu/qcgbv5zf7yhjm0oe.png?w=216" style={{height:"100px"}} alt="" />
+      <CSidebarBrand className="d-none d-md-flex bgdark" to="/" >
+        <img src={logo} style={{height:"100px"}} alt="" />
       </CSidebarBrand>
-      <CSidebarNav className='bgwhite'>
+      <CSidebarNav className='bgdark'>
         <SimpleBar>
           <AppSidebarNav items={navigation} />
         </SimpleBar>

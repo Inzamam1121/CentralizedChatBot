@@ -53,9 +53,9 @@ const AllBots = () => {
   return (
     <CRow>
       <CCol xs>
-        <CCard className="mb-4">
-          <CCardHeader className='bggray clwhite'>All ChatBots Sites</CCardHeader>
-          <CCardBody className='bggray'>
+        <CCard className="mb-4 bgdark">
+          <CCardHeader className='bgdark clwhite'>All ChatBots Sites</CCardHeader>
+          <CCardBody className='bgdark'>
             <div className="mainBody">
               {Users.length > 0 && Users.map((item, index) => (
                 <div className="block">
