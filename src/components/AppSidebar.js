@@ -16,6 +16,7 @@ import 'simplebar/dist/simplebar.min.css'
 import navigation from '../_nav'
 
 import logo from "src/assets/images/CNLOGO.png"
+import logo2 from "src/assets/images/Logo.png"
 
 const AppSidebar = () => {
   const dispatch = useDispatch()
@@ -24,7 +25,7 @@ const AppSidebar = () => {
 
   return (
     <CSidebar
-    className='bggray'
+      className='bggray'
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -33,7 +34,12 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex bgdark" to="/" >
-        <img src={logo} style={{height:"100px"}} alt="" />
+        {unfoldable ?
+          <img src={logo2} style={{ height: "50px",width:"50px" }} alt="" />
+          :
+          <img src={logo} style={{ height: "100px" }} alt="" />
+
+        }
       </CSidebarBrand>
       <CSidebarNav className='bgdark'>
         <SimpleBar>
