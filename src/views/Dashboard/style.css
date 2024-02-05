@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .clgray{
-    color: #4e5253 !important;
+    color: white !important;
 }
 
 .bggraybtn{
@@ -60,11 +60,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .imag{
-    width: 100px; 
+    width: 100px;
     height: 100px;
 }
 
-@media screen and (max-width:950px) {    
+@media screen and (max-width:950px) {
     .main{
         flex-direction: column;
         align-items: flex-start;
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6,p{
 
     }
     .imag{
-        width: 75px; 
+        width: 75px;
         height: 75px;
     }
 
@@ -84,6 +84,6 @@ h1,h2,h3,h4,h5,h6,p{
         width: 100%;
         flex-basis: 100%;
     }
-    
+
 }
 

@@ -45,7 +45,7 @@ const AppHeader = () => {
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="d-flex">
-          <CButton color="mx-2 bggray clwhite bgbutton"
+          <CButton color="mx-2 bgdark clwhite bgbutton"
             onClick={() => {
               sessionStorage.removeItem("authToken")
               navigate('/login')
