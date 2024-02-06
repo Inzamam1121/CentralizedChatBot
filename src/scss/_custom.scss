@@ -100,6 +100,20 @@
     border-color: white !important;
 }
 
+.sidebar-toggler::before{
+    background-image:url("../assets/images/left-arrow.png")
+}
+
+.sidebar-toggler:hover::before{
+    background-image:url("../assets/images/left-arrow.png")
+}
+
+// .pos{
+//     position: absolute;
+//     right: 0px;
+//     top: 0;
+//     bottom: 0;
+// }
 
 .borderdata{
     border: 3px solid #B0B8BC;

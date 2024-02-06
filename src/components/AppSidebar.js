@@ -47,7 +47,7 @@ const AppSidebar = () => {
         </SimpleBar>
       </CSidebarNav>
       <CSidebarToggler
-        className="d-none d-lg-flex"
+        className="d-none d-lg-flex bgwhite pos"
         onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
       />
     </CSidebar>
