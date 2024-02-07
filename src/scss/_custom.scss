@@ -115,6 +115,15 @@
 //     bottom: 0;
 // }
 
+
+.sidebar-narrow-unfoldable:not(:hover){
+    padding-bottom: 0px !important;
+}
+
+.relative{
+    position: relative;
+}
+
 .borderdata{
     border: 3px solid #B0B8BC;
     border-radius: 10px;

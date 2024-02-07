@@ -1,0 +1,42 @@
+.bgsection{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background-color: black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100px;
+    width: 20px;
+    /* padding: 5px; */
+}
+
+
+
+.bgclose{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    background-color: black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100px;
+    width: 20px;
+}
+
+.imagesection{
+    width: 15px;
+    background: url("../assets/images/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100%;
+}
+
+.closeImage{
+    width: 15px;
+    background: url("../assets/images/right-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100%;
+}
