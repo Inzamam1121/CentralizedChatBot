@@ -54,7 +54,7 @@ const AllBots = () => {
     <CRow>
       <CCol xs>
         <CCard className="mb-4 bgdark">
-          <CCardHeader className='bgdark mylogin'>s</CCardHeader>
+          <CCardHeader className='bgdark mylogin'>All Chatbot Sites</CCardHeader>
           <CCardBody className='bgdark'>
             <div className="mainBody">
               {Users.length > 0 && Users.map((item, index) => (
