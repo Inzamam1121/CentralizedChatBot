@@ -37,12 +37,12 @@ const AppSidebar = () => {
         }}
       >
         <CSidebarBrand className="d-none d-md-flex bgdark" to="/" >
-          {unfoldable ?
+          {/* {unfoldable ?
             <img src={logo2} style={{ height: "50px", width: "50px" }} alt="" />
-            :
-            <img src={logo} style={{ height: "100px" }} alt="" />
+            : */}
+            <img src={logo} style={{ height: "100px",width:"-webkit-fill-available",objectFit:"contain" }} alt="" />
 
-          }
+          {/* } */}
         </CSidebarBrand>
         <CSidebarNav className='bgdark'>
           <SimpleBar>
