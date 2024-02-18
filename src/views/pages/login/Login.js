@@ -106,8 +106,8 @@ const Login = () => {
               <CCard className="p-4 bgclear">
                 <CCardBody>
                   <CForm className='text-center'>
-                    <h1 className='clwhite'>Login</h1>
-                    <p className="text-medium-emphasis clwhite">Sign In to your account</p>
+                    <h1 className='clwhite2'>Login</h1>
+                    <p className="text-medium-emphasis clwhite2">Sign In to your account</p>
                     <div className='borderdata'>
                       <CAvatar size="sm" src={google} />
                       <h2>Continue With Google</h2>
@@ -118,7 +118,7 @@ const Login = () => {
                       <h2>Continue With Facebook</h2>
                       <div></div>
                     </div>
-                    <p className="text-medium-emphasis clwhite">Or</p>
+                    <p className="text-medium-emphasis clwhite2">Or</p>
                     <CInputGroup className="mb-3">
                       <CInputGroupText className='bggray'>
                         <CIcon icon={cilUser} className='clwhite' />
