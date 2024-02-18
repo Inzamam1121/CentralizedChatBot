@@ -120,7 +120,7 @@ const Login = () => {
                     </div>
                     <p className="text-medium-emphasis clwhite">Or</p>
                     <CInputGroup className="mb-3">
-                      <CInputGroupText className='bgblue'>
+                      <CInputGroupText className='bggray'>
                         <CIcon icon={cilUser} className='clwhite' />
                       </CInputGroupText>
                       <CFormInput
@@ -132,7 +132,7 @@ const Login = () => {
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
-                      <CInputGroupText className='bgblue'>
+                      <CInputGroupText className='bggray'>
                         <CIcon icon={cilLockLocked} className='clwhite' />
                       </CInputGroupText>
                       <CFormInput
@@ -146,7 +146,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol>
-                        <CButton color="primary" className="px-4 bgblue my-4 bgbuttonblue w-100" onClick={handleLogin} disabled={isSubmitting}>
+                        <CButton color="primary" className="px-4 clblack bggray my-4 bgbuttonblue w-100" onClick={handleLogin} disabled={isSubmitting}>
                           {isSubmitting ? "Logining" : "Login"}
                         </CButton>
                       </CCol>
