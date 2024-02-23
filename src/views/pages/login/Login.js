@@ -187,8 +187,8 @@ const Login = () => {
                     </CRow>
                     <p className="text-medium-emphasis clwhite2 text-center">Or</p>
                     <div className='d-flex flex-row gap-4 justify-content-center align-items-center'>
-                      <CAvatar size="md" src={google} />
-                      <CAvatar size="md" src={facebook} />
+                      <CAvatar size="md" src={google} style={{cursor:"pointer"}} />
+                      <CAvatar size="md" src={facebook} style={{cursor:"pointer"}} />
 
                     </div>
                     {/* <div className='borderdata'>
