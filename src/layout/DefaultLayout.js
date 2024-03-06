@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import "./style.css"
+import "../views/Dashboard/style.css"
 
 const DefaultLayout = () => {
   const dispatch = useDispatch()
@@ -27,7 +27,7 @@ const DefaultLayout = () => {
         <div className="wrapper d-flex flex-column min-vh-100 bg-light">
 
           <AppHeader />
-          <div className="body flex-grow-1 px-3 bgblue py-5 relative">
+          <div className="body flex-grow-1 px-3 bgnewdark py-5 relative">
             <div className={`${unfoldable ? "bgclose" : "bgsection"}`}
               onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}>
               <div className={`${unfoldable ? "closeImage" : "imagesection"}`}>

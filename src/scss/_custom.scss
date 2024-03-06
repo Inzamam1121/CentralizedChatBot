@@ -79,8 +79,9 @@
 }
 
 .sidebar-nav .nav-link.active{
-    background-color: #001f3f !important;
-    color: white !important;
+    background-color: #FFD700 !important;
+    border-color: #CCCCCC;
+    color: black !important;
 }
 
 .breadcrumb-item + .breadcrumb-item::before{
@@ -96,11 +97,11 @@
 }
 
 .sidebar-nav .nav-link.active .nav-icon{
-    color: white !important;
+    color: black !important;
 }
 
 .simplebar-content{
-    margin-right: 5px;
+    margin-right: 0px;
 }
 
 .bgdarker{

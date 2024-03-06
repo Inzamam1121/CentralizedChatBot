@@ -1,0 +1,34 @@
+.bgnewdark{
+    background-color: #1A1F2B;
+    background: #1A1F2B;
+    color: white;
+}
+
+
+.bgyellow{
+background-color: #FFD700;
+background: #FFD700;
+}
+
+.bordercol{
+    border-color: #CCCCCC;
+}
+
+.textblack{
+    color: black;
+}
+
+.textwhite{
+    color: white !important;
+    text-decoration: none;
+}
+
+.textwhite a{
+    color: white !important;
+    text-decoration: none;
+}
+
+.bgpurple{
+    background-color: #df40e0;
+    background: #df40e0;
+}

@@ -19,6 +19,8 @@ import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/logo'
 
+import "./style.css"
+
 const AppHeader = () => {
   const navigate=useNavigate()
 
@@ -26,26 +28,26 @@ const AppHeader = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="bgblue">
+    <CHeader position="sticky" className="bgnewdark">
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
         >
-          <CIcon icon={cilMenu} size="lg"  className='clwhite'/>
+          <CIcon icon={cilMenu} size="lg" style={{color:"white"}}/>
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
           {/* <CIcon icon={logo} height={48} alt="Logo" /> */}
         </CHeaderBrand>
         <CHeaderNav className="d-none d-md-flex me-auto">
           <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink} className='clwhite'>
+            <CNavLink to="/dashboard" component={NavLink} style={{color:"white"}}>
               Dashboard
             </CNavLink>
           </CNavItem>
         </CHeaderNav>
         <CHeaderNav className="d-flex">
-          <CButton color="mx-2 bgdark mylogin bgbutton"
+          <CButton color="mx-2 bgyellow bordercol mylogin bgbutton textblack"
             onClick={() => {
               sessionStorage.removeItem("authToken")
               navigate('/login')

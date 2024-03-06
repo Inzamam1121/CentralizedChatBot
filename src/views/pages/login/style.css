@@ -1,91 +1,220 @@
-.bubble{
+.bubble {
     width: 300px;
     height: 300px;
     position: absolute;
     z-index: 0;
 }
 
-.bubble.b_2{
+.bubble.b_2 {
     bottom: -15%;
     right: -15%;
 }
 
-.bubble.b_1{
-        /* background-color: rgb(138 138 138 / 10%);
+.bubble.b_1 {
+    /* background-color: rgb(138 138 138 / 10%);
     border-radius: 50%; */
     top: -15%;
     left: -20%;
 }
 
-.sec_2{
+.sec_2 {
     z-index: 1;
 }
 
-.leftsec{
-        background-color: #001f3f;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
-        overflow: hidden;
-        display: none;
+.leftsec {
+    background-color: #001f3f;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    overflow: hidden;
+    display: none;
 }
 
-.heightcontainer{
-    height: auto;
+.heightcontainer {
+    height: 80vh;
 }
 
-.formsec{
+.formsec {
     text-align: center;
     flex: 0 0 auto;
     width: 100%;
 }
 
-@media (max-width: 500px){
-    .flexcol{
+@media (max-width: 500px) {
+    .flexcol {
         width: 90%;
         margin: auto;
     }
 }
 
 
-.texth2{
-    font-size:3rem;
+.texth2 {
+    font-size: 3rem;
 }
 
-@media (min-width: 650px){
-    .formsec{
+@media (min-width: 650px) {
+    .formsec {
         text-align: left;
-            flex: 0 0 auto;
-            width: 50%;
+        flex: 0 0 auto;
+        width: 50%;
     }
-    .leftsec{
+
+    .leftsec {
         display: flex;
     }
-    .bubble{
+
+    .bubble {
         width: 250px;
         height: 250px;
     }
-    .heightcontainer{
-        height: 50vh;
+
+    .heightcontainer {
+        height: fit-content;
     }
-    .texth2{
+
+    .texth2 {
         font-size: 3rem;
     }
 }
 
-@media (min-width: 992px){
-    .heightcontainer{
-        height: 40vh;
+@media (min-width: 992px) {
+    .heightcontainer {
+        height: fit-content;
     }
-    .texth2{
+
+    .texth2 {
         font-size: 3.5rem;
     }
 }
 
-@media (min-width: 1200px){
-    .heightcontainer{
-        height: 70vh;
+@media (min-width: 1024px) {
+    .heightcontainer {
+        height: auto;
     }
-    .texth2{
+}
+
+@media (min-width: 1200px) {
+    .heightcontainer {
+        height: fit-content;
+    }
+
+    .texth2 {
         font-size: 3.5rem;
+    }
+}
+
+
+
+.bgnewdark{
+    background-color: #1A1F2B;
+    background: #1A1F2B;
+    color: white;
+}
+
+.bgpurple{
+    background: rgb(222,63,224);
+background: linear-gradient(141deg, rgba(222,63,224,1) 41%, rgba(185,0,250,1) 100%);
+}
+
+.bgyellow{
+background-color: #FFD700;
+background: #FFD700;
+}
+
+.btnnew:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
+.bordercol{
+    border-color: #CCCCCC;
+}
+
+.textblack{
+    color: black !important;
+}
+
+.textwhite{
+    color: white !important;
+    text-decoration: none;
+}
+
+.textwhite a{
+    color: white !important;
+    text-decoration: none;
+}
+
+.LoginBody{
+    /* background-color: white; */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+/* .FlexIMage{
+display: flex;
+justify-content: center;
+width: 100%;
+} */
+
+.LogoImage{
+    max-width: 100px;
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.LoginHead{
+    color: black !important;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.LoginPrim{
+    color: black !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Groupsocial{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.SocialTab{
+    display: flex;
+    border: 1px solid gray;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.SocialTab h3{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.IconImage{
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width:650px) {
+    .LogoImage{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    .LoginBody{
+        padding: 10px 10px;
+    }
+    .LoginHead{
+        font-size: 2rem;
     }
 }

@@ -17,12 +17,11 @@ import {
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
 import AlertContext from 'src/Context/Alert/AlertContext'
-import BgVideo from '../../../assets/video/Intro.gif'
+import BgVideo from '../../../assets/images/BlobGif.gif'
 import facebook from '../../../assets/images/facebook.png'
 import google from '../../../assets/images/search.png'
-import Logo from "../../../assets/images/Logo.png"
-import Blob1 from "../../../assets/images/blob.svg"
-import Blob2 from "../../../assets/images/blob2.svg"
+
+import logo from "../../../assets/images/Logo.png"
 
 import "./style.css"
 
@@ -96,48 +95,32 @@ const Login = () => {
 
 
   return (
-    <div className="bg-light min-vh-100 d-flex flex-row align-items-center"
+    <div className="bg-white min-vh-100 d-flex flex-row align-items-center position-relative overflow-hidden"
       style={{
+        // backgroundColor: "#ffffff"
         background: `url(${BgVideo})`,
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "cover",
         backgroundAttachment: "fixed"
       }}>
       <CContainer className='heightcontainer'>
         <CRow className="justify-content-center h-100">
-          <CCol xl={9} lg={12} md={12} sm={8} className='flexcol'>
+          <CCol xl={5} lg={8} md={8} sm={8} className='flexcol'>
             <CCardGroup className='h-100'>
-              <CCard
-                className="bgclear"
-                style={{
-                  borderRadius: "25px"
-                }}
-              >
+              <CCard >
                 <CCardBody className='p-0'>
-                  <div className='d-flex h-100 gap-4 align-items-center'
-                    style={{ borderRadius: "100px" }} >
-                    <div
-                      className='position-relative h-100 col-md-5 flex-column justify-content-center align-items-center leftsec'
-                    >
-                      <div className="bubble b_1">
-                        <img src={Blob2} alt="" className='w-100' />
+                  <div className=' h-100  align-items-center LoginBody'>
+                    <CForm className='p-2'>
+                      <div className="LogoImage">
+                        <img src={logo} alt="" style={{width:"100%",height:"100%"}} />
                       </div>
-                      <div className="bubble b_2">
-                        <img src={Blob1} alt="" className='w-100' />
-                      </div>
-                      <div className='d-flex flex-column justify-content-center align-items-center sec_2'>
-                        <img src={Logo} alt="" />
-                        <h2 className='text-white fs-2 fw-bold'>Cosmic Nucleus</h2>
-                      </div>
-                    </div>
-                    <CForm className='p-4 col-md-6 formsec'>
-                      <h1 className='clwhite2 texth2'>Login</h1>
-                      <p className="text-medium-emphasis clwhite2">Sign In to your account</p>
+                      <h1 className='LoginHead'>Login To Your Account</h1>
+                      <p className="LoginPrim">Sign In to your account</p>
 
                       <CInputGroup className="mb-3">
-                        <CInputGroupText className='bggray'>
-                          <CIcon icon={cilUser} className='clwhite' />
+                        <CInputGroupText className='bgpurple'>
+                          <CIcon icon={cilUser} className='textblack' />
                         </CInputGroupText>
                         <CFormInput
                           name="email"
@@ -148,8 +131,8 @@ const Login = () => {
                         />
                       </CInputGroup>
                       <CInputGroup className="mb-4">
-                        <CInputGroupText className='bggray'>
-                          <CIcon icon={cilLockLocked} className='clwhite' />
+                        <CInputGroupText className='bgpurple'>
+                          <CIcon icon={cilLockLocked} className='textblack' />
                         </CInputGroupText>
                         <CFormInput
                           type="password"
@@ -162,25 +145,24 @@ const Login = () => {
                       </CInputGroup>
                       <CRow>
                         <CCol>
-                          <CButton color="primary" className="px-4 clblack bggray my-1 bgbuttonblue w-100" onClick={handleLogin} disabled={isSubmitting}>
+                          <CButton color="primary" className="px-4 clblack bgpurple btnnew my-1 w-100 bordercol" onClick={handleLogin} disabled={isSubmitting}>
                             {isSubmitting ? "Logining" : "Login"}
                           </CButton>
                         </CCol>
                       </CRow>
-                      <p className="text-medium-emphasis clwhite2 text-center">Or</p>
-                      <div className='d-flex flex-row gap-4 justify-content-center align-items-center'>
-                        <CAvatar size="md" src={google} style={{ cursor: "pointer" }} />
-                        <CAvatar size="md" src={facebook} style={{ cursor: "pointer" }} />
-
+                      <p className="LoginPrim text-center mt-2 mb-2">Or</p>
+                      <div className='Groupsocial'>
+                        <div className='SocialTab'>
+                          <img src={google} alt="" className='IconImage' />
+                          <h3>Sign-In with Google</h3>
+                          <div></div>
+                        </div>
+                        <div className='SocialTab'>
+                          <img src={facebook} alt="" className='IconImage' />
+                          <h3>Sign-In with Facebook</h3>
+                          <div></div>
+                        </div>
                       </div>
-                      {/* <div className='borderdata'>
-                      <h2>Continue With Google</h2>
-                      <div></div>
-                    </div>
-                    <div className='borderdata'>
-                      <h2>Continue With Facebook</h2>
-                      <div></div>
-                    </div> */}
                     </CForm>
                   </div>
                 </CCardBody>

@@ -12,12 +12,12 @@ import { sygnet } from 'src/assets/brand/sygnet'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
 
-// import "./style.css"
+import "./style.css"
 
 // sidebar nav config
 import navigation from '../_nav'
 
-import logo from "src/assets/images/CNLOGO.png"
+import logo from "src/assets/images/CNLogo2.png"
 import logo2 from "src/assets/images/Logo.png"
 
 const AppSidebar = () => {
@@ -28,7 +28,7 @@ const AppSidebar = () => {
   return (
     <>
       <CSidebar
-        className='bggray'
+        className='bgnewdark'
         position="fixed"
         unfoldable={unfoldable}
         visible={sidebarShow}
@@ -36,31 +36,20 @@ const AppSidebar = () => {
           dispatch({ type: 'set', sidebarShow: visible })
         }}
       >
-        <CSidebarBrand className="d-none d-md-flex bgdark" to="/" >
+        <CSidebarBrand className="d-flex bgnewdark" to="/" >
           {/* {unfoldable ?
             <img src={logo2} style={{ height: "50px", width: "50px" }} alt="" />
             : */}
-            <img src={logo} style={{ height: "100px",width:"-webkit-fill-available",objectFit:"contain" }} alt="" />
+            <img src={logo} style={{ height: "112.5px",width:"-webkit-fill-available",objectFit:"contain" }} alt="" />
 
           {/* } */}
         </CSidebarBrand>
-        <CSidebarNav className='bgdark'>
+        <CSidebarNav className='bgnewdark'>
           <SimpleBar>
             <AppSidebarNav items={navigation} />
           </SimpleBar>
         </CSidebarNav>
-        {/* <CSidebarToggler
-          className="d-none d-lg-flex bgwhite pos"
-          onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
-        /> */}
       </CSidebar>
-      
-      {/* <div className={`${unfoldable?"bgclose":"bgsection"}`}
-        onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}>
-        <div className={`${unfoldable?"closeImage":"imagesection"}`}>
-        
-        </div>
-      </div> */}
     </>
   )
 }
