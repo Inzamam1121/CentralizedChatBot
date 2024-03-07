@@ -120,7 +120,7 @@ const Login = () => {
 
                       <CInputGroup className="mb-3">
                         <CInputGroupText className='bgpurple'>
-                          <CIcon icon={cilUser} className='textblack' />
+                          <CIcon icon={cilUser} className='textwhite' />
                         </CInputGroupText>
                         <CFormInput
                           name="email"
@@ -132,7 +132,7 @@ const Login = () => {
                       </CInputGroup>
                       <CInputGroup className="mb-4">
                         <CInputGroupText className='bgpurple'>
-                          <CIcon icon={cilLockLocked} className='textblack' />
+                          <CIcon icon={cilLockLocked} className='textwhite' />
                         </CInputGroupText>
                         <CFormInput
                           type="password"
@@ -145,7 +145,7 @@ const Login = () => {
                       </CInputGroup>
                       <CRow>
                         <CCol>
-                          <CButton color="primary" className="px-4 clblack bgpurple btnnew my-1 w-100 bordercol" onClick={handleLogin} disabled={isSubmitting}>
+                          <CButton color="primary" className="px-4 clblack bgpurple textwhite btnnew my-1 w-100 bordercol" onClick={handleLogin} disabled={isSubmitting}>
                             {isSubmitting ? "Logining" : "Login"}
                           </CButton>
                         </CCol>
