@@ -5,29 +5,21 @@ import {
     CCardHeader,
     CCol,
     CForm,
-    CFormCheck,
     CFormInput,
     CFormLabel,
-    CFormSelect,
 } from '@coreui/react';
-import React, { useState, useEffect, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
 import AlertContext from 'src/Context/Alert/AlertContext';
 
 const AddFile = () => {
     const AletContext = useContext(AlertContext);
     const { showAlert } = AletContext;
 
-    const location = useLocation();
-    const item = location.state;
-
-
     const [formData, setFormData] = useState({
         file: ''
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [Url, setUrl] = useState(item.Upload_Link);
 
 
     const handleInputChange = (e) => {
@@ -77,10 +69,8 @@ const AddFile = () => {
             console.log(response)
 
             if (response.ok) {
-                // Handle success, e.g., show a success message or redirect
                 showAlert('File Uploded successfully', 'success');
             } else {
-                // Handle errors, e.g., show an error message
                 showAlert('Failed to Upload File', 'danger');
             }
         } catch (error) {
@@ -96,15 +86,15 @@ const AddFile = () => {
 
     return (
         <CCol xs={12}>
-            <CCard className="mb-4 border-0 bggreen p-1">
-                <CCardHeader className='bggreen textwhite'>
+            <CCard className="mb-4 border-0 bgpurplegradient p-1">
+                <CCardHeader className='bgpurplegradient textwhite'>
                     <strong>Add File</strong>
                 </CCardHeader>
-                <CCardBody className='bggreen'>
+                <CCardBody className='bgpurplegradient'>
                     <CForm className="bgForm bgwhite" onSubmit={handleFormSubmit}>
                         <div className="row">
                             <div className="mb-3 col-md-6">
-                                <CFormLabel htmlFor="file" className='clwhite'>Upload File (.txt, .docx)</CFormLabel>
+                                <CFormLabel htmlFor="file">Upload File (.txt, .docx)</CFormLabel>
                                 <CFormInput
                                     type="file"
                                     id="file"
@@ -113,7 +103,7 @@ const AddFile = () => {
                             </div>
                         </div>
                         <div className="mb-3">
-                            <CButton type="submit" className="mb-3 bgyellow textblack bordercol" disabled={isSubmitting} >
+                            <CButton type="submit" className="mb-3 bgpurplegradient textwhite" disabled={isSubmitting} style={{borderColor:"white"}} >
                                 {isSubmitting ? 'Adding File...' : 'Add File'}
                             </CButton>
                         </div>

@@ -1,9 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-
 import routes from '../routes'
 import "./style.css"
-
 import { CBreadcrumb, CBreadcrumbItem } from '@coreui/react'
 
 const AppBreadcrumb = () => {
@@ -34,13 +32,13 @@ const AppBreadcrumb = () => {
 
   return (
     <CBreadcrumb className="m-0 ms-2">
-      <CBreadcrumbItem href="/" className='textwhite'>Home</CBreadcrumbItem>
+      <CBreadcrumbItem href="/" className='textblack'>Home</CBreadcrumbItem>
       {breadcrumbs.map((breadcrumb, index) => {
         return (
           <CBreadcrumbItem
             {...(breadcrumb.active ? { active: true } : { href: breadcrumb.pathname })}
             key={index}
-            className='textwhite'
+            className='textblack'
           >
             {breadcrumb.name}
           </CBreadcrumbItem>

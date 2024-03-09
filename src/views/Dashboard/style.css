@@ -88,6 +88,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 
+.bgpurplegradient{
+    background: rgb(222,63,224);
+    background: linear-gradient(141deg, rgba(222,63,224,1) 41%, rgba(185,0,250,1) 100%);
+}
+
 
 
 .bgnewdark{

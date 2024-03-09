@@ -32,3 +32,13 @@ background: #FFD700;
     background-color: #df40e0;
     background: #df40e0;
 }
+
+
+.bgpurplegradient{
+    background: rgb(222,63,224);
+    background: linear-gradient(141deg, rgba(222,63,224,1) 41%, rgba(185,0,250,1) 100%);
+}
+
+.borderright{
+    border-right: 1px solid #d8dbe0 !important;
+}

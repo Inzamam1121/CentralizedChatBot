@@ -27,7 +27,7 @@ const DefaultLayout = () => {
         <div className="wrapper d-flex flex-column min-vh-100 bg-light">
 
           <AppHeader />
-          <div className="body flex-grow-1 px-3 bgnewdark py-5 relative">
+          <div className="body flex-grow-1 px-3 bgwhite py-5 relative">
             <div className={`${unfoldable ? "bgclose" : "bgsection"}`}
               onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}>
               <div className={`${unfoldable ? "closeImage" : "imagesection"}`}>

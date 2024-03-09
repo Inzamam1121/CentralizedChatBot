@@ -1,11 +1,4 @@
 import {
-  CProgress,
-  CTable,
-  CTableBody,
-  CTableDataCell,
-  CTableHead,
-  CTableHeaderCell,
-  CTableRow,
   CButton,
   CRow,
   CCol,
@@ -17,7 +10,6 @@ import {
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AlertContext from 'src/Context/Alert/AlertContext';
-// import Avatar from 'src/assets/images/avatars/profile.jpeg';
 import "./style.css"
 
 const AllBots = () => {
@@ -53,9 +45,9 @@ const AllBots = () => {
   return (
     <CRow>
       <CCol xs>
-        <CCard className="mb-4 bggreen p-1">
-          <CCardHeader className='bggreen mylogin'>All Chatbot Sites</CCardHeader>
-          <CCardBody className='bggreen'>
+        <CCard className="mb-4 bgpurplegradient p-1">
+          <CCardHeader className='bgpurplegradient mylogin'>All Chatbot Sites</CCardHeader>
+          <CCardBody className='bgpurplegradient'>
             <div className="mainBody">
               {Users.length > 0 && Users.map((item, index) => (
                 <div className="block">
@@ -67,12 +59,12 @@ const AllBots = () => {
                     <p className='clgray'>{item?.Description}</p>
                   </div>
                   <div className="button">
-                    <CButton color="mx-2 bgyellow" style={{ borderColor: "#CCCCCC" }}>
-                      <a href={item?.Website} target='_blank' style={{ color: "black", textDecoration: "none", borderColor: "#bf1b2c" }}>
+                    <CButton color="mx-2 bgpurplegradient">
+                      <a href={item?.Website} target='_blank' style={{ color: "white", textDecoration: "none" }}>
                         Visit Website
                       </a>
                     </CButton>
-                    <CButton color="mx-2 bgyellow" style={{ color: "black",borderColor:"#CCCCCC" }}
+                    <CButton color="mx-2 bgpurplegradient" style={{ color: "white" }}
                       onClick={() => {
                         navigate("/Bots/AddFile", { state: item });
                       }}>

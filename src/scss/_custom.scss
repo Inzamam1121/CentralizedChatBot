@@ -79,9 +79,8 @@
 }
 
 .sidebar-nav .nav-link.active{
-    background-color: #FFD700 !important;
-    border-color: #CCCCCC;
-    color: black !important;
+    background: linear-gradient(141deg, rgba(222,63,224,1) 30%, rgba(185,0,250,1) 100%);
+    color: white !important;
 }
 
 .breadcrumb-item + .breadcrumb-item::before{
@@ -89,15 +88,15 @@
 }
 
 .sidebar-nav .nav-link{
-    color: white !important;
+    color: black !important;
 }
 
 .sidebar-nav svg.nav-icon{
-    color: white !important;
+    color: black !important;
 }
 
 .sidebar-nav .nav-link.active .nav-icon{
-    color: black !important;
+    color: white !important;
 }
 
 .simplebar-content{
@@ -128,12 +127,6 @@
     background-image:url("../assets/images/left-arrow.png")
 }
 
-// .pos{
-//     position: absolute;
-//     right: 0px;
-//     top: 0;
-//     bottom: 0;
-// }
 
 
 .sidebar-narrow-unfoldable:not(:hover){
@@ -175,4 +168,11 @@
     .borderdata h2{
         font-size: 16px;
     }
+}
+
+
+
+.btn:hover{
+    background: rgb(222,63,224);
+    background: linear-gradient(141deg, rgba(222,63,224,1) 20%, rgba(185,0,250,1) 100%);
 }
