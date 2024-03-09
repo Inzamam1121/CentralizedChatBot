@@ -115,8 +115,8 @@ const Login = () => {
                       <div className="LogoImage">
                         <img src={logo} alt="" style={{width:"100%",height:"100%"}} />
                       </div>
-                      <h1 className='LoginHead'>Login To Your Account</h1>
-                      <p className="LoginPrim">Sign In to your account</p>
+                      <h1 className='LoginHead text-center'>Login Cosmic Superstar!</h1>
+                      {/* <p className="LoginPrim">Sign In to your account</p> */}
 
                       <CInputGroup className="mb-3">
                         <CInputGroupText className='bgpurple'>
