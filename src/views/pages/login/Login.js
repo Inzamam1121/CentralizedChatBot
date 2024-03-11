@@ -106,7 +106,7 @@ const Login = () => {
       }}>
       <CContainer className='heightcontainer'>
         <CRow className="justify-content-center h-100">
-          <CCol xl={5} lg={8} md={8} sm={8} className='flexcol'>
+          <CCol xl={6} lg={8} md={8} sm={8} className='flexcol'>
             <CCardGroup className='h-100'>
               <CCard >
                 <CCardBody className='p-0'>

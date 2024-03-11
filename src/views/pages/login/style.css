@@ -94,7 +94,7 @@
 
 @media (min-width: 1200px) {
     .heightcontainer {
-        height: fit-content;
+        height: 75vh;
     }
 
     .texth2 {
