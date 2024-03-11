@@ -18,6 +18,11 @@ background: #FFD700;
     color: black;
 }
 
+.textblack a{
+    text-decoration: none !important;
+    color: black !important;
+}
+
 .textwhite{
     color: white !important;
     text-decoration: none;
