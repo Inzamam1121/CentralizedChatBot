@@ -104,60 +104,60 @@
 
 
 
-.bgnewdark{
+.bgnewdark {
     background-color: #1A1F2B;
     background: #1A1F2B;
     color: white;
 }
 
-.bgpurple{
-    background: rgb(222,63,224);
-    background: linear-gradient(141deg, rgba(222,63,224,1) 20%, rgba(185,0,250,1) 100%);
+.bgpurple {
+    background: rgb(222, 63, 224);
+    background: linear-gradient(141deg, rgba(185, 0, 250, 1) 20%, rgba(222, 63, 224, 1) 100%);
 }
 
-.borderright{
+.borderright {
     border-right: 1px solid #d8dbe0 !important;
 }
 
-.bgyellow{
-background-color: #FFD700;
-background: #FFD700;
+.bgyellow {
+    background-color: #FFD700;
+    background: #FFD700;
 }
 
-.btnnew:hover{
+.btnnew:hover {
     background-color: white !important;
     color: black !important;
 }
 
-.bordercol{
+.bordercol {
     border-color: #CCCCCC;
 }
 
-.textblack{
+.textblack {
     color: black !important;
 }
 
-.textwhite{
+.textwhite {
     color: white !important;
     text-decoration: none;
 }
 
-.textwhite a{
+.textwhite a {
     color: white !important;
     text-decoration: none;
 }
 
-.LoginBody{
+.LoginBody {
     /* background-color: white; */
     padding: 20px 40px;
     border-radius: 10px;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.LogoImage{
+.LogoImage {
     max-width: 100px;
     width: 60%;
     border-radius: 10px;
@@ -168,25 +168,25 @@ background: #FFD700;
 }
 
 
-.LoginHead{
+.LoginHead {
     color: black !important;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.LoginPrim{
+.LoginPrim {
     color: black !important;
     font-size: 16px;
     font-weight: 500;
 }
 
-.Groupsocial{
+.Groupsocial {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.SocialTab{
+.SocialTab {
     display: flex;
     border: 1px solid gray;
     align-items: center;
@@ -196,27 +196,29 @@ background: #FFD700;
     justify-content: space-between;
 }
 
-.SocialTab h3{
+.SocialTab h3 {
     font-size: 16px;
     font-weight: 500;
     color: black;
     margin-bottom: 0px;
 }
 
-.IconImage{
+.IconImage {
     width: 25px;
     height: 25px;
 }
 
 @media screen and (max-width:650px) {
-    .LogoImage{
+    .LogoImage {
         width: 60%;
         margin-bottom: 10px;
     }
-    .LoginBody{
+
+    .LoginBody {
         padding: 10px 10px;
     }
-    .LoginHead{
+
+    .LoginHead {
         font-size: 2rem;
     }
 }

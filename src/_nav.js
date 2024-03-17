@@ -12,7 +12,13 @@ const _nav = [
     name: 'All Chat Bots',
     to: '/dashboard',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-  }
+  },
+  {
+    component: CNavItem,
+    name: 'Add New User',
+    to: '/user/Adduser',
+    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
+  },
 
 ]
 

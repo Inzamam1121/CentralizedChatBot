@@ -41,7 +41,7 @@ background: #FFD700;
 
 .bgpurplegradient{
     background: rgb(222,63,224);
-    background: linear-gradient(141deg, rgba(222,63,224,1) 41%, rgba(185,0,250,1) 100%);
+    background: linear-gradient(141deg, rgba(185, 0, 250, 1) 20%, rgba(222, 63, 224, 1) 100%);
 }
 
 .borderright{

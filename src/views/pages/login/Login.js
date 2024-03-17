@@ -115,7 +115,7 @@ const Login = () => {
                       <div className="LogoImage">
                         <img src={logo} alt="" style={{width:"100%",height:"100%"}} />
                       </div>
-                      <h1 className='LoginHead text-center'>Login Cosmic Superstar!</h1>
+                      <h1 className='LoginHead text-center mb-4'>Login Cosmic Superstar!</h1>
                       {/* <p className="LoginPrim">Sign In to your account</p> */}
 
                       <CInputGroup className="mb-3">
@@ -150,7 +150,7 @@ const Login = () => {
                           </CButton>
                         </CCol>
                       </CRow>
-                      <p className="LoginPrim text-center mt-2 mb-2">Or</p>
+                      <p className="LoginPrim text-center mt-4 mb-2">Or</p>
                       <div className='Groupsocial'>
                         <div className='SocialTab'>
                           <img src={google} alt="" className='IconImage' />
