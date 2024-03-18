@@ -17,7 +17,7 @@ const Settings = () => {
 
     const [formData, setFormData] = useState({
         password: '',
-        email:'',
+        email: '',
         confirmpassword: ''
     });
 
@@ -34,9 +34,9 @@ const Settings = () => {
         setIsSubmitting(true);
         e.preventDefault();
 
-        const {email, password, confirmpassword } = formData;
+        const { email, password, confirmpassword } = formData;
 
-        if(password!==confirmpassword){
+        if (password !== confirmpassword) {
             showAlert('Password doesnt match', 'danger');
             return;
         }
@@ -58,17 +58,19 @@ const Settings = () => {
                 const data = await response.json();
                 showAlert(data.message, 'success');
             } else {
+                setIsSubmitting(false);
                 const data = await response.json();
                 showAlert(data.detail, 'danger');
             }
         } catch (error) {
+            setIsSubmitting(false);
             showAlert(error.detail, 'danger');
         } finally {
             setIsSubmitting(false);
             setFormData({
                 email: '',
                 password: '',
-                confirmpassword:''
+                confirmpassword: ''
             });
         }
     };
