@@ -53,7 +53,8 @@ const NewUser = () => {
                 const data = await response.json();
                 showAlert(data.message, 'success');
             } else {
-                showAlert('Failed to Add User', 'danger');
+                const data = await response.json();
+                showAlert(data.detail, 'danger');
             }
         } catch (error) {
             showAlert('Failed to Add User', 'danger');

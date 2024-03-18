@@ -62,12 +62,13 @@ const Settings = () => {
                 showAlert(data.detail, 'danger');
             }
         } catch (error) {
-            showAlert('Failed to Add User', 'danger');
+            showAlert(error.detail, 'danger');
         } finally {
             setIsSubmitting(false);
             setFormData({
                 email: '',
-                password: ''
+                password: '',
+                confirmpassword:''
             });
         }
     };
