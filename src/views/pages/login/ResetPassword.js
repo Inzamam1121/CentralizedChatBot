@@ -15,17 +15,15 @@ import {
   CRow,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import { cilLockLocked, cilUser } from '@coreui/icons'
+import { cilUser } from '@coreui/icons'
 import AlertContext from 'src/Context/Alert/AlertContext'
 import BgVideo from '../../../assets/images/BlobGif.gif'
-import facebook from '../../../assets/images/facebook.png'
-import google from '../../../assets/images/search.png'
 
 import logo from "../../../assets/images/Logo.png"
 
 import "./style.css"
 
-const Login = () => {
+const ForgetPassword = () => {
 
   const AletContext = useContext(AlertContext);
   const { showAlert } = AletContext;
@@ -34,7 +32,6 @@ const Login = () => {
 
   const [credentials, setCredentials] = useState({
     email: '',
-    password: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -43,39 +40,30 @@ const Login = () => {
 
   const handleLogin = async () => {
     setIsSubmitting(true);
-
     try {
-      // Make the API call to your login endpoint
-      const payload = new URLSearchParams();
-      payload.append('email', credentials.email);
-      payload.append('password', credentials.password);
-
-      const response = await fetch('https://mymbgserver.mbgchat.com/login', {
+      const response = await fetch('https://mymbgserver.mbgchat.com/requestpasswordreset', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json'
         },
-        body: payload,
-        redirect: 'follow', // Follow redirects automatically
+        body: JSON.stringify({
+            user_email:credentials.email
+        })
       });
 
       if (response.ok) {
         // If the login is successful, get the auth token from the response
         const data = await response.json();
-        const authToken = data.token;
 
-        // Save the auth token in session storage
-        sessionStorage.setItem('authToken', authToken);
-
-        showAlert('Login Success', 'success');
+        showAlert('Temp password send to your mail', 'success');
 
         setIsSubmitting(false);
-        navigate("/dashboard");
+        navigate("/login");
 
         // Redirect to another page or perform other actions as needed
       } else {
         // Handle error cases, e.g., display an error message
-        showAlert('Incorrect Credentials', 'danger');
+        showAlert('Email not Exist', 'danger');
         setIsSubmitting(false);
       }
     } catch (error) {
@@ -104,7 +92,7 @@ const Login = () => {
         backgroundPosition: "cover",
         backgroundAttachment: "fixed"
       }}>
-      <CContainer className='heightcontainer'>
+      <CContainer className='heightcontainer2'>
         <CRow className="justify-content-center h-100">
           <CCol xl={6} lg={8} md={8} sm={8} className='flexcol'>
             <CCardGroup className='h-100'>
@@ -113,10 +101,10 @@ const Login = () => {
                   <div className=' h-100  align-items-center LoginBody'>
                     <CForm className='p-2'>
                       <div className="LogoImage">
-                        <img src={logo} alt="" style={{ width: "100%", height: "100%" }} />
+                        <img src={logo} alt="" style={{width:"100%",height:"100%"}} />
                       </div>
-                      <h1 className='LoginHead text-center mb-4'>Login Cosmic Superstar!</h1>
-                      {/* <p className="LoginPrim">Sign In to your account</p> */}
+                      <h1 className='LoginHead text-center mb-4'>Enter Your registered Email</h1>
+                      <p className="LoginPrim">We will send a temporary password to your Email</p>
 
                       <CInputGroup className="mb-3">
                         <CInputGroupText className='bgpurple'>
@@ -130,34 +118,14 @@ const Login = () => {
                           onChange={handleChange}
                         />
                       </CInputGroup>
-                      <CInputGroup className="mb-0">
-                        <CInputGroupText className='bgpurple'>
-                          <CIcon icon={cilLockLocked} className='textwhite' />
-                        </CInputGroupText>
-                        <CFormInput
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          autoComplete="current-password"
-                          value={credentials.password}
-                          onChange={handleChange}
-                        />
-                      </CInputGroup>
-
-                      <Link to={'/forget-password'} className='mb-4'>
-                        <p className="LoginPrim text-left mt-4 mb-2">
-                          Forget Password?
-                        </p>
-                      </Link>
-
                       <CRow>
                         <CCol>
                           <CButton color="primary" className="px-4 clblack bgpurple textwhite btnnew my-1 w-100 bordercol" onClick={handleLogin} disabled={isSubmitting}>
-                            {isSubmitting ? "Logining" : "Login"}
+                            {isSubmitting ? "Sending mail..." : "Send Mail"}
                           </CButton>
                         </CCol>
                       </CRow>
-                      <p className="LoginPrim text-center mt-4 mb-2">Or</p>
+                      {/* <p className="LoginPrim text-center mt-4 mb-2">Or</p>
                       <div className='Groupsocial'>
                         <div className='SocialTab'>
                           <img src={google} alt="" className='IconImage' />
@@ -169,7 +137,7 @@ const Login = () => {
                           <h3>Sign-In with Facebook</h3>
                           <div></div>
                         </div>
-                      </div>
+                      </div> */}
                     </CForm>
                   </div>
                 </CCardBody>
@@ -182,4 +150,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default ForgetPassword

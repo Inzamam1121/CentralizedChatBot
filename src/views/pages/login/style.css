@@ -33,6 +33,10 @@
     height: 80vh;
 }
 
+.heightcontainer2{
+    height: fit-content;
+}
+
 .formsec {
     text-align: center;
     flex: 0 0 auto;

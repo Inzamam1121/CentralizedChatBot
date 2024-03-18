@@ -11,13 +11,14 @@ import {
 import React, { useState, useContext } from 'react';
 import AlertContext from 'src/Context/Alert/AlertContext';
 
-const NewUser = () => {
+const Settings = () => {
     const alertContext = useContext(AlertContext);
     const { showAlert } = alertContext;
 
     const [formData, setFormData] = useState({
-        email: '',
-        password: ''
+        password: '',
+        email:'',
+        confirmpassword: ''
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,19 +34,18 @@ const NewUser = () => {
         setIsSubmitting(true);
         e.preventDefault();
 
-        const { email, password } = formData;
-        console.log(email)
+        const {email, password } = formData;
 
         try {
-            const response = await fetch(`https://mymbgserver.mbgchat.com/createuser`, {
+            const response = await fetch(`https://mymbgserver.mbgchat.com/updatepassword`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ 
+                body: JSON.stringify({
                     token: sessionStorage.getItem('authToken'),
-                    email, 
-                    password 
+                    password,
+                    email
                 })
             });
 
@@ -65,13 +65,11 @@ const NewUser = () => {
             });
         }
     };
-
-
     return (
         <CCol xs={12}>
             <CCard className="mb-4 border-0 bgpurplegradient p-1">
                 <CCardHeader className='bgpurplegradient textwhite'>
-                    <strong>Add User</strong>
+                    <strong>Change Password</strong>
                 </CCardHeader>
                 <CCardBody className='bgpurplegradient'>
                     <CForm className="bgForm bgwhite" onSubmit={handleFormSubmit}>
@@ -82,31 +80,41 @@ const NewUser = () => {
                                     type="email"
                                     id="email"
                                     value={formData.email}
-                                    placeholder='Enter Email'
+                                    placeholder='Enter login Email'
                                     onChange={handleInputChange}
                                 />
                             </div>
                             <div className="mb-3 col-md-4">
-                                <CFormLabel htmlFor="password">Password</CFormLabel>
+                                <CFormLabel htmlFor="password">New Password</CFormLabel>
                                 <CFormInput
                                     type="password"
                                     id="password"
                                     value={formData.password}
-                                    placeholder='Enter Password'
+                                    placeholder='Enter New Password'
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="mb-3 col-md-4">
+                                <CFormLabel htmlFor="confirmpassword">Confirm New Password</CFormLabel>
+                                <CFormInput
+                                    type="password"
+                                    id="passconfirmpasswordword"
+                                    value={formData.confirmpassword}
+                                    placeholder='Confirm Password'
                                     onChange={handleInputChange}
                                 />
                             </div>
                         </div>
                         <div className="mb-3">
                             <CButton type="submit" className="mb-3 bgpurplegradient textwhite" disabled={isSubmitting} style={{ borderColor: "white" }} >
-                                {isSubmitting ? 'Adding User...' : 'Add User'}
+                                {isSubmitting ? 'Updating Password...' : 'Update Password'}
                             </CButton>
                         </div>
                     </CForm>
                 </CCardBody>
             </CCard>
         </CCol>
-    );
-};
+    )
+}
 
-export default NewUser;
+export default Settings
