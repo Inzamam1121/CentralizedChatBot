@@ -34,7 +34,12 @@ const Settings = () => {
         setIsSubmitting(true);
         e.preventDefault();
 
-        const {email, password } = formData;
+        const {email, password, confirmpassword } = formData;
+
+        if(password!==confirmpassword){
+            showAlert('Password doesnt match', 'danger');
+            return;
+        }
 
         try {
             const response = await fetch(`https://mymbgserver.mbgchat.com/updatepassword`, {
@@ -98,7 +103,7 @@ const Settings = () => {
                                 <CFormLabel htmlFor="confirmpassword">Confirm New Password</CFormLabel>
                                 <CFormInput
                                     type="password"
-                                    id="passconfirmpasswordword"
+                                    id="confirmpassword"
                                     value={formData.confirmpassword}
                                     placeholder='Confirm Password'
                                     onChange={handleInputChange}
