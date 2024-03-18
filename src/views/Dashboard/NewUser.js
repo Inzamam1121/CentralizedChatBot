@@ -53,10 +53,12 @@ const NewUser = () => {
                 const data = await response.json();
                 showAlert(data.message, 'success');
             } else {
+                setIsSubmitting(false);
                 const data = await response.json();
                 showAlert(data.detail, 'danger');
             }
         } catch (error) {
+            setIsSubmitting(false);
             showAlert('Failed to Add User', 'danger');
         } finally {
             setIsSubmitting(false);
