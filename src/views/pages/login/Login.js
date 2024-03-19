@@ -21,7 +21,7 @@ import BgVideo from '../../../assets/images/BlobGif.gif'
 import facebook from '../../../assets/images/facebook.png'
 import google from '../../../assets/images/search.png'
 
-import logo from "../../../assets/images/Logo.png"
+import logo from "../../../assets/images/logo1.png"
 
 import "./style.css"
 
@@ -113,7 +113,7 @@ const Login = () => {
                   <div className=' h-100  align-items-center LoginBody'>
                     <CForm className='p-2'>
                       <div className="LogoImage">
-                        <img src={logo} alt="" style={{ width: "100%", height: "100%" }} />
+                        <img src={logo} alt="" style={{ width: "1000px", height: "100px" }} />
                       </div>
                       <h1 className='LoginHead text-center mb-4'>Login Cosmic Superstar!</h1>
                       {/* <p className="LoginPrim">Sign In to your account</p> */}
