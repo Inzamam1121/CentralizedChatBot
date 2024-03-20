@@ -25,8 +25,8 @@ const AppSidebar = () => {
         }}
       >
         <CSidebarBrand className="d-flex bgwhite" to="/" >
-            {/* <img src={logo2} style={{ height: "112.5px",width:"-webkit-fill-available",objectFit:"contain" }} alt="" /> */}
-            <h1 style={{color:"black",fontSize:"30px",fontFamily:"fantasy"}} className='mb-0'>Cosmic Nucleus</h1>
+            <img src={logo2} style={{ height: "60px",width:"2000px",objectFit:"contain" }} alt="" />
+            {/* <h1 style={{color:"black",fontSize:"30px",fontFamily:"fantasy"}} className='mb-0'>Cosmic Nucleus</h1> */}
         </CSidebarBrand>
         <CSidebarNav className='bgwhite'>
           <SimpleBar>
