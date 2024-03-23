@@ -101,7 +101,7 @@ const ForgetPassword = () => {
                   <div className=' h-100  align-items-center LoginBody'>
                     <CForm className='p-2'>
                       <div className="LogoImage">
-                        <img src={logo} alt="" style={{width:"100%",height:"100%"}} />
+                      <h1>COSMIC NUCLEUS</h1>
                       </div>
                       <h1 className='LoginHead text-center mb-4'>Enter Your registered Email</h1>
                       <p className="LoginPrim">We will send a temporary password to your Email</p>

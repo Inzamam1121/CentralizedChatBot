@@ -38,6 +38,13 @@ background: #FFD700;
     background: #df40e0;
 }
 
+.gradienttext{
+    background: linear-gradient(141deg, rgba(156, 28, 243, 1) 20%, rgba(222, 63, 224, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
 
 .bgpurplegradient{
     background: rgb(222,63,224);

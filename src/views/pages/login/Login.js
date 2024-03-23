@@ -113,7 +113,8 @@ const Login = () => {
                   <div className=' h-100  align-items-center LoginBody'>
                     <CForm className='p-2'>
                       <div className="LogoImage">
-                        <img src={logo} alt="" style={{ width: "100%", height: "100%" }} />
+                        {/* <img src={logo} alt="" style={{ width: "100%", height: "100%" }} /> */}
+                        <h1>COSMIC NUCLEUS</h1>
                       </div>
                       <h1 className='LoginHead text-center mb-4'>Login Cosmic Superstar!</h1>
                       {/* <p className="LoginPrim">Sign In to your account</p> */}
@@ -144,7 +145,7 @@ const Login = () => {
                         />
                       </CInputGroup>
 
-                      <Link to={'/forget-password'} className='mb-4'>
+                      <Link to={'/forget-password'} className='mb-4' style={{textDecoration:"none"}}>
                         <p className="LoginPrim text-left mt-4 mb-2">
                           Forget Password?
                         </p>

@@ -162,13 +162,20 @@
 }
 
 .LogoImage {
-    max-width: 100px;
+    /* max-width: 100px;
     width: 60%;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+.LogoImage h1{
+    background: linear-gradient(141deg, rgba(156, 28, 243, 1) 20%, rgba(222, 63, 224, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
 }
 
 
