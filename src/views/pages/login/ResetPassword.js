@@ -19,7 +19,7 @@ import { cilUser } from '@coreui/icons'
 import AlertContext from 'src/Context/Alert/AlertContext'
 import BgVideo from '../../../assets/images/BlobGif.gif'
 
-import logo from "../../../assets/images/Logo.png"
+import logo from "../../../assets/images/logo1.png"
 
 import "./style.css"
 

@@ -4,7 +4,7 @@ import { CSidebar, CSidebarBrand, CSidebarNav } from '@coreui/react'
 import { AppSidebarNav } from './AppSidebarNav'
 import SimpleBar from 'simplebar-react'
 import navigation from '../_nav'
-import logo2 from "src/assets/images/Logo.png"
+import logo2 from "src/assets/images/logo1.png"
 import 'simplebar/dist/simplebar.min.css'
 import "./style.css"
 
